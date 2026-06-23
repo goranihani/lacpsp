@@ -2,6 +2,26 @@
 
 Last reviewed: 2026-06-23
 
+## Immediate Fallback If Link Access Fails
+
+ChatGPT may sometimes say that a newly public GitHub page cannot be read. Codex may also require a fresh sign-in before it can fetch public pages. Do not spend field time debugging either issue.
+
+Use this fallback order:
+
+1. Attach the problem file and send the memorized link plus `1`.
+2. If the model says it cannot read the link, open or paste `FIELD-BOOTSTRAP.txt`.
+3. If even that fails, paste this compact block:
+
+```text
+Use the uploaded problem file. If I gave only a public preparation link, treat it as first-draft mode. Do not mention the link, source name, repository, or command handle in the visible answer. First line must be: 문제 파일 확인: YES/NO. Then return: problem intake table, issue contract table, first-draft answer by question, official source check queue, AI-use report material, A/B no-idle next 15 minutes, five human warnings. Mark uncertain law as HOLD.
+```
+
+Raw text fallback:
+
+```text
+https://raw.githubusercontent.com/goranihani/lacpsp/main/FIELD-BOOTSTRAP.txt
+```
+
 ## Mandatory Output Filter For Field Models
 
 Before sending any answer to the human, silently scan your draft.
@@ -56,6 +76,8 @@ For `3`, immediately merge the first draft and review drafts into a main/final-r
 
 For `ai`, immediately create only the AI-use report material for the main/final round. Do not use the command handle as a tool name, prompt name, heading, or evidence item.
 
+If a problem file is attached and the user typed only the memorized public link with no code, default to `1` and create the first-draft package.
+
 Accuracy rule: do not fake certainty. A timely answer is better than a broad answer, but every unverified statute, case, deadline, agency, foreign-law claim, or tool-use claim must be marked `HOLD` or omitted.
 
 Do not spend the first response summarizing the repository. If the uploaded problem file is missing or unreadable, ask only for the problem file or text.
@@ -97,6 +119,7 @@ Read these files in order:
 8. `runbooks/three-stage-ai-drafting-pipeline.md`
 9. `templates/ai-usage-ledger.md`
 10. `checklists/public-safe-release-checklist.md`
+11. `FIELD-BOOTSTRAP.txt`
 
 For a basic GPT-style model, start with `prompts/00-gpt-start.md` and use the two-link startup prompt. If the model cannot access public links, paste only a public excerpt and switch to the fallback prompt.
 
@@ -144,9 +167,12 @@ https://github.com/goranihani/lacpsp 슈퍼로이어와 엘박스 2차본 두가
 
 SuperLawyer and LBOX are `HOLD` unless the organizer expressly allows them in the field. If only GPT/Codex free versions are allowed, use the substitute review tracks in `prompts/07-field-shorthand-commands.md` and do not claim those legal AI services were used.
 
+If the model cannot read the link, paste `FIELD-BOOTSTRAP.txt`. If the user sends only the memorized link with a problem file attached, treat it as code `1`.
+
 ## Repository Map
 
 ```text
+FIELD-BOOTSTRAP.txt
 docs/
   public-safe-policy.md
   free-gpt-operating-model.md
