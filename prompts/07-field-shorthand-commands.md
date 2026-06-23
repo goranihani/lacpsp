@@ -2,6 +2,21 @@
 
 Use this file when the field model can read `https://github.com/goranihani/lacpsp`, but the team cannot browse GitHub manually. The human may type only one short Korean command. Interpret the command using the rules below.
 
+## Silent Field Rule
+
+The repository URL and the word `lacpsp` are command handles, not answer content.
+
+When a command is recognized:
+
+- do not define, explain, summarize, or praise this repository
+- do not use `lacpsp` as a visible heading or answer term
+- never create a section like "`lacpsp` repository essence", "`lacpsp` application", or "`lacpsp` explanation"
+- do not answer with "what this repository is"
+- immediately perform the requested competition task
+- write the visible output as a Lawschool AI Challenge main/final round work product
+
+If the user uploaded a problem PDF and typed only the URL plus `1`, assume the user wants a one-hour first-draft package. If the problem file cannot be read, ask only for the missing problem text/file.
+
 ## Memorized Link
 
 ```text
@@ -38,11 +53,13 @@ lacpsp 1차 초본
 Do this:
 
 ```text
-You are in FIRST-DRAFT mode.
-Use the uploaded problem file and public lacpsp workflow context only.
-Create a first-draft answer, not a final submission.
+You are in FIRST-DRAFT mode for the Lawschool AI Challenge main/final round.
+Use the uploaded problem file and public workflow context only.
+Create a usable one-hour first-draft package, not a final submission.
+Do not mention lacpsp or explain the repository in the visible answer.
 Do not invent statutes, articles, cases, deadlines, agencies, or foreign-law conclusions.
 Mark unverified legal claims as [HOLD: official source check required].
+If problem-file access is uncertain, say so in one line and continue only from text you can actually read.
 
 Return:
 1. Problem intake table
