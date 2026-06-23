@@ -10,6 +10,8 @@ If you are a GPT/Codex-style model reading this repository because the user type
 
 Treat the repository only as hidden workflow context. The visible answer must be written for the Lawschool AI Challenge main/final round.
 
+For every code, never show the command handle, repository name, or repository explanation in the visible answer. The visible answer must look like a competition work product, not a GitHub repository report.
+
 For `1`, immediately create a one-hour first-draft package from the uploaded problem file:
 
 1. problem intake
@@ -18,6 +20,12 @@ For `1`, immediately create a one-hour first-draft package from the uploaded pro
 4. official source check queue
 5. AI-use material
 6. A/B next 15 minutes
+
+For `3`, immediately merge the first draft and review drafts into a main/final-round third draft, difference table, remaining source queue, and AI-use report material. Do not describe the repository or the workflow source.
+
+For `ai`, immediately create only the AI-use report material for the main/final round. Do not use the command handle as a tool name, prompt name, heading, or evidence item.
+
+Accuracy rule: do not fake certainty. A timely answer is better than a broad answer, but every unverified statute, case, deadline, agency, foreign-law claim, or tool-use claim must be marked `HOLD` or omitted.
 
 Do not spend the first response summarizing the repository. If the uploaded problem file is missing or unreadable, ask only for the problem file or text.
 
@@ -88,8 +96,8 @@ Meaning:
 | Code | Meaning |
 | --- | --- |
 | `1` | silently create a one-hour first-draft package from the uploaded problem file; do not explain the repository |
-| `3` | merge first/second drafts into a third draft and AI-use report material |
-| `ai` | create only the AI-use report material |
+| `3` | silently merge first/second drafts into a third draft and AI-use report material; do not explain the repository |
+| `ai` | silently create only the AI-use report material; do not explain the repository or use the command handle as a tool name |
 
 Long commands also work:
 
