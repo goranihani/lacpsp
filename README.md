@@ -35,10 +35,32 @@ Read these files in order:
 3. `docs/free-gpt-operating-model.md`
 4. `docs/foreign-law-source-map.md`
 5. `prompts/00-gpt-start.md`
-6. `templates/ai-usage-ledger.md`
-7. `checklists/public-safe-release-checklist.md`
+6. `prompts/07-field-shorthand-commands.md`
+7. `runbooks/three-stage-ai-drafting-pipeline.md`
+8. `templates/ai-usage-ledger.md`
+9. `checklists/public-safe-release-checklist.md`
 
 For a basic GPT-style model, start with `prompts/00-gpt-start.md` and use the two-link startup prompt. If the model cannot access public links, paste only a public excerpt and switch to the fallback prompt.
+
+## Field Short Commands
+
+If the team cannot browse GitHub manually, memorize only this link:
+
+```text
+https://github.com/goranihani/lacpsp
+```
+
+Use these short commands inside an allowed GPT/Codex-style model:
+
+```text
+https://github.com/goranihani/lacpsp 초벌 진행할거야.
+```
+
+```text
+https://github.com/goranihani/lacpsp 슈퍼로이어와 엘박스 2차본 두가지로 3차본을 만듬과 동시에 ai사용방법에 대한 내용도 만들어줘.
+```
+
+SuperLawyer and LBOX are `HOLD` unless the organizer expressly allows them in the field. If only GPT/Codex free versions are allowed, use the substitute review tracks in `prompts/07-field-shorthand-commands.md` and do not claim those legal AI services were used.
 
 ## Repository Map
 
@@ -51,6 +73,7 @@ docs/
 runbooks/
   two-person-180min-main-final.md
   final-round-pivot.md
+  three-stage-ai-drafting-pipeline.md
 prompts/
   00-gpt-start.md
   01-problem-intake.md
@@ -59,6 +82,8 @@ prompts/
   04-adversarial-critic.md
   05-ai-usage-report.md
   06-general-model-first-draft.md
+  07-field-shorthand-commands.md
+  08-third-draft-and-ai-usage-report.md
 templates/
   answer-20page-skeleton.md
   ai-usage-ledger.md
