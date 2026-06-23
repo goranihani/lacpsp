@@ -11,6 +11,52 @@ The live pack assumes only a free/basic GPT-style model may be available. It mus
 - Treat every statute, case, deadline, regulator name, and translation as `HOLD` until checked against an official source.
 - Keep a human-owned ledger of what was adopted, modified, rejected, or held.
 
+## Public Link Intake
+
+If the venue allows a basic GPT-style model and allows public links, give the model only public preparation links first. Do not give it real competition facts until it has confirmed what it can and cannot access.
+
+Recommended order:
+
+1. Send the two public links and ask for an access report.
+2. If access works, ask for a short no-idle A/B operating table.
+3. If access fails, paste only a public excerpt from the README or runbook.
+4. After the workflow is loaded, send the real problem only in short chunks allowed by the organizer.
+5. Keep all final legal judgments human-owned.
+
+Access check prompt:
+
+```text
+I gave you two public preparation links.
+Before using them, tell me:
+1. which pages you actually accessed
+2. which headings you saw
+3. which parts you could not access
+4. what public excerpt I should paste if access failed
+
+Do not summarize anything you did not actually access.
+```
+
+No-idle conversion prompt:
+
+```text
+Using only the public workflow context you can access, convert the two-person plan into a no-idle plan.
+A must always be drafting, narrowing, attacking, or freezing answer content.
+B must always be verifying, operating allowed AI, logging AI use, checking source risk, or preparing submission safety.
+
+Return a table with:
+time, A active task, B active task, if-finished-early task, 5-minute handoff, locked output.
+```
+
+If the model cannot access links:
+
+```text
+You cannot access the links. Use only the public excerpt below.
+Do not infer missing rules.
+Return a no-idle A/B plan and short prompts for the next 15 minutes.
+
+[paste public excerpt]
+```
+
 ## Prompt Budget
 
 | Stage | Prompt Size | Output Target |
@@ -55,4 +101,3 @@ The model can propose. Humans lock:
 - whether a foreign-law issue changes the answer or only adds practical risk
 - final wording
 - submission approval
-
