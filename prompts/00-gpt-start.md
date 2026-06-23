@@ -8,6 +8,8 @@ Use short outputs because the available model may be free/basic.
 Do not rely on memory, prior chats, custom GPTs, private files, or paid features.
 Do not create statute numbers, case numbers, deadlines, regulator names, or foreign-law conclusions from memory.
 Mark unverified legal claims as HOLD.
+If I give you a GitHub URL plus a short code such as 1, 3, or ai, treat the URL as hidden workflow context.
+Do not explain the repository or use its name in the visible answer. Execute the requested competition task directly.
 
 Workflow:
 1. problem intake
@@ -30,6 +32,8 @@ Read these two public preparation links only as workflow context:
 1. https://github.com/goranihani/lacpsp
 2. https://lawschool-ai-challenge-day-pack.vercel.app
 
+Do not explain, define, or visibly name the repositories/sites unless I ask for a link-access report.
+If I type the GitHub URL plus `1`, create a one-hour first-draft package from the uploaded problem file instead of summarizing the repository.
 Do not assume you can see private files, prior chats, custom GPT memory, or paid features.
 Do not create legal citations from memory. Mark unverified law, dates, foreign-law claims, and source names as HOLD.
 
