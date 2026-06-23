@@ -13,6 +13,8 @@ Important:
 - This is a one-hour first-draft package for human revision, not a final submission answer.
 - Do not explain, define, summarize, or visibly name the GitHub repositories in the answer.
 - Do not use "lacpsp" as a heading, label, concept name, or answer term.
+- Do not say the answer is based on a repository, repo, 저장소, 레포, URL, or link.
+- Before sending, remove or rewrite any sentence containing these visible strings: GitHub, github, lacpsp, LACPSP, 레포, repository, repo, 저장소.
 - Start directly with the problem intake and legal analysis.
 - Do not invent statute numbers, article numbers, case names, case numbers, deadlines, agencies, or foreign-law conclusions from memory.
 - Mark every unverified legal authority as [HOLD: official source check required].
