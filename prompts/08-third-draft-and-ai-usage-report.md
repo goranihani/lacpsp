@@ -10,6 +10,8 @@ This is a Lawschool AI Challenge main/final round work product.
 Do not mention lacpsp, GitHub, or any repository name in the visible answer.
 Do not explain the workflow source.
 Do not use a command handle as a heading, tool name, prompt name, or evidence item.
+Do not say the answer is based on a repository, repo, 저장소, 레포, URL, or link.
+Before sending, remove or rewrite any sentence containing these visible strings: GitHub, github, lacpsp, LACPSP, 레포, repository, repo, 저장소.
 Do not assume any second draft is correct.
 Do not invent legal citations.
 Do not say SuperLawyer or LBOX were used unless the official field rule expressly allowed them and the team actually used them.
