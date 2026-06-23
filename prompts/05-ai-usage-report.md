@@ -8,6 +8,8 @@ Do not explain the workflow source.
 Do not use a command handle as a tool name, prompt name, heading, or evidence item.
 Do not say the report is based on a repository, repo, 저장소, 레포, URL, or link.
 Before sending, remove or rewrite any sentence containing these visible strings: GitHub, github, lacpsp, LACPSP, 레포, repository, repo, 저장소.
+The first visible line must be exactly: `AI 활용내역서 초안`.
+Do not put any greeting, source explanation, or role explanation before that line.
 Do not invent tools or uses.
 Do not paste long prompts or AI outputs.
 Include adopted, modified, rejected, held, and verified examples.
