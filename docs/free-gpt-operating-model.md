@@ -2,6 +2,20 @@
 
 The live pack assumes only a free/basic GPT-style model may be available. It must work without long context, custom instructions, advanced file upload, persistent memory, browsing guarantees, or paid model reliability.
 
+For the current official-limit snapshot and 3-hour budget, see `docs/free-chatgpt-codex-usage-limits-20260623.md`.
+
+## Current Limit Rule
+
+OpenAI's official pages do not give a fixed free-message count for GPT-5.5 Instant. The official pattern is a limited 5-hour window, dynamic limits, and possible fallback to a smaller model after the free limit.
+
+Field assumption:
+
+- one 3-hour round is one no-reset window
+- 3 essential model turns should be enough
+- 5 model turns is the maximum planned budget
+- GPT-5.5 Thinking and GPT-5.5 Pro should not be assumed on a free account
+- Codex access on a free account is limited and optional, so use it only for short review, formatting, or checklist work
+
 ## Operating Rules
 
 - Use short prompts.
@@ -73,13 +87,23 @@ Assume the free/basic model may run out of turns. Do not spend turns asking it t
 
 | Turn | Use | Stop after |
 | --- | --- | --- |
-| 1 | first draft from uploaded problem and `lacpsp` context | first-draft answer plus HOLD queue |
+| 1 | first draft from uploaded problem and hidden workflow context | first-draft answer plus HOLD queue |
 | 2 | compress HOLD/source queue | top 10 checks only |
-| 3 | second-draft split or substitute review | differences and risks only |
+| 3 | second-draft split or substitute review | differences, overclaims, and decisive facts only |
 | 4 | third-draft merge | answer plus CONFIRM/MODIFY/HOLD/DELETE table |
-| 5 | AI-usage report and final risk list | report material plus five submission risks |
+| 5 | AI-use report and final risk list | report material plus five delivery risks |
 
-If the model cannot access GitHub, paste the short command from `prompts/07-field-shorthand-commands.md` instead of the full repository.
+If the model cannot access public links, paste the short command from `prompts/07-field-shorthand-commands.md` instead of broad background material.
+
+Emergency 3-turn budget:
+
+```text
+Turn 1: first-draft package
+Turn 2: third-draft merge after human/legal-AI review
+Turn 3: AI-use report material
+```
+
+Track B owns the turn counter. If the model warns about limits, loses file access, or starts explaining the source link instead of doing the task, stop broad AI work and switch to human drafting plus source verification.
 
 ## Avoid
 
