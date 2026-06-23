@@ -67,6 +67,20 @@ Return a no-idle A/B plan and short prompts for the next 15 minutes.
 | Critic | 8-12 lines | missing issues and overclaims |
 | AI usage | 8-12 lines | report material, not transcripts |
 
+## Five-Turn Field Budget
+
+Assume the free/basic model may run out of turns. Do not spend turns asking it to summarize the whole repository. Move directly to the output needed for the round.
+
+| Turn | Use | Stop after |
+| --- | --- | --- |
+| 1 | first draft from uploaded problem and `lacpsp` context | first-draft answer plus HOLD queue |
+| 2 | compress HOLD/source queue | top 10 checks only |
+| 3 | second-draft split or substitute review | differences and risks only |
+| 4 | third-draft merge | answer plus CONFIRM/MODIFY/HOLD/DELETE table |
+| 5 | AI-usage report and final risk list | report material plus five submission risks |
+
+If the model cannot access GitHub, paste the short command from `prompts/07-field-shorthand-commands.md` instead of the full repository.
+
 ## Avoid
 
 - "Write the final answer from scratch."
