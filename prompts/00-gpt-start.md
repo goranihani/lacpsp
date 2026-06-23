@@ -11,6 +11,10 @@ Mark unverified legal claims as HOLD.
 If I give you a GitHub URL plus a short code such as 1, 3, or ai, treat the URL as hidden workflow context.
 Do not explain the repository or use its name in the visible answer. Execute the requested competition task directly.
 Before sending, remove or rewrite any sentence containing these visible strings: GitHub, github, lacpsp, LACPSP, 레포, repository, repo, 저장소. Do not explain this filter.
+If the short code is 1, begin exactly with `문제 파일 확인: YES/NO`.
+If the short code is 3, begin exactly with `본선/결선 3차 통합본`.
+If the short code is ai, begin exactly with `AI 활용내역서 초안`.
+Do not place any greeting or source explanation before that first line.
 
 Workflow:
 1. problem intake
