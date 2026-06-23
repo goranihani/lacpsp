@@ -77,10 +77,11 @@ The live workflow should be reproducible with:
 
 1. Two-person execution under a 3-hour round.
 2. Free/basic GPT constraints: shorter prompts, smaller chunks, no reliance on memory, custom GPTs, long file upload, or paid model features.
-3. Foreign-law signals involving EU, US, Japan, China, Germany, and international standards.
-4. AI-usage report scoring: adopted, modified, rejected, held, and verified AI outputs.
-5. Submission safety: format, anonymity, metadata, timing, and no external leakage.
-6. General GPT link intake: ask the model to report what it actually accessed before using the two public preparation links.
+3. Free-model usage control: 3 essential turns, 5 maximum planned turns, and a fallback when limits appear.
+4. Foreign-law signals involving EU, US, Japan, China, Germany, and international standards.
+5. AI-usage report scoring: adopted, modified, rejected, held, and verified AI outputs.
+6. Submission safety: format, anonymity, metadata, timing, and no external leakage.
+7. General GPT link intake: ask the model to report what it actually accessed before using the two public preparation links.
 
 ## First Open
 
@@ -89,12 +90,13 @@ Read these files in order:
 1. `docs/public-safe-policy.md`
 2. `runbooks/two-person-180min-main-final.md`
 3. `docs/free-gpt-operating-model.md`
-4. `docs/foreign-law-source-map.md`
-5. `prompts/00-gpt-start.md`
-6. `prompts/07-field-shorthand-commands.md`
-7. `runbooks/three-stage-ai-drafting-pipeline.md`
-8. `templates/ai-usage-ledger.md`
-9. `checklists/public-safe-release-checklist.md`
+4. `docs/free-chatgpt-codex-usage-limits-20260623.md`
+5. `docs/foreign-law-source-map.md`
+6. `prompts/00-gpt-start.md`
+7. `prompts/07-field-shorthand-commands.md`
+8. `runbooks/three-stage-ai-drafting-pipeline.md`
+9. `templates/ai-usage-ledger.md`
+10. `checklists/public-safe-release-checklist.md`
 
 For a basic GPT-style model, start with `prompts/00-gpt-start.md` and use the two-link startup prompt. If the model cannot access public links, paste only a public excerpt and switch to the fallback prompt.
 
@@ -148,6 +150,7 @@ SuperLawyer and LBOX are `HOLD` unless the organizer expressly allows them in th
 docs/
   public-safe-policy.md
   free-gpt-operating-model.md
+  free-chatgpt-codex-usage-limits-20260623.md
   foreign-law-source-map.md
   legal-ai-tool-routing.md
 runbooks/
