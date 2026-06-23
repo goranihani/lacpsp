@@ -8,11 +8,28 @@ Use this file when the field model can read `https://github.com/goranihani/lacps
 https://github.com/goranihani/lacpsp
 ```
 
+## Fast Code Router
+
+If the user sends a GitHub link or repo name followed by a short code, route immediately. The code may appear after a Markdown link, after the raw URL, or directly after `lacpsp`.
+
+| Code | Example inputs | Mode |
+| --- | --- | --- |
+| `1` | `goranihani/lacpsp 1`, `goranihani/lacpsp1`, `https://github.com/goranihani/lacpsp 1`, `lacpsp 1` | Command 1: First Draft |
+| `3` | `goranihani/lacpsp 3`, `goranihani/lacpsp3`, `https://github.com/goranihani/lacpsp 3`, `lacpsp 3` | Command 3: Third Draft And AI-Usage Report |
+| `ai` | `goranihani/lacpsp ai`, `goranihani/lacpspai`, `https://github.com/goranihani/lacpsp ai`, `lacpsp ai` | Command AI: AI-Usage Report Only |
+
+Do not spend a free/basic GPT turn summarizing this repository. Once a fast code is recognized, execute the matching mode. If required inputs are missing, ask only for the missing inputs in a short checklist.
+
 ## Command 1: First Draft
 
 If the user says any of the following:
 
 ```text
+goranihani/lacpsp 1
+goranihani/lacpsp1
+https://github.com/goranihani/lacpsp 1
+lacpsp 1
+lacpsp1
 goranihani/lacpsp 초벌 진행할거야
 lacpsp 초벌 진행
 lacpsp 1차 초본
@@ -61,6 +78,11 @@ Return two short prompts:
 If the user says any of the following:
 
 ```text
+goranihani/lacpsp 3
+goranihani/lacpsp3
+https://github.com/goranihani/lacpsp 3
+lacpsp 3
+lacpsp3
 goranihani/lacpsp 슈퍼로이어와 엘박스 2차본 두가지로 3차본을 만듬과 동시에 ai사용방법에 대한 내용도 만들어줘
 lacpsp 2차본 통합해서 3차본과 AI사용내역 만들어줘
 lacpsp 3차본 + AI활용내역서
@@ -90,6 +112,44 @@ Create:
 6. final submission risk list
 
 If SuperLawyer or LBOX were not expressly allowed, do not write that they were used. Instead write that the team used only allowed GPT/Codex-style tools and human verification.
+```
+
+## Command AI: AI-Usage Report Only
+
+If the user says any of the following:
+
+```text
+goranihani/lacpsp ai
+goranihani/lacpspai
+https://github.com/goranihani/lacpsp ai
+lacpsp ai
+lacpspai
+lacpsp AI활용내역서
+```
+
+Do this:
+
+```text
+You are in AI-USAGE REPORT mode.
+Create only the AI-usage report material.
+Do not rewrite the legal answer unless needed to explain a tool-use decision.
+Do not claim any tool was used unless the human says it was actually used and officially allowed.
+If SuperLawyer or LBOX were not expressly allowed, mark them as NOT USED / HOLD.
+
+If inputs are missing, ask for only this short checklist:
+1. Which tools were actually used?
+2. What was each tool asked to do?
+3. What output was adopted, modified, rejected, or held?
+4. What official sources did humans check?
+5. What AI limitation or hallucination risk was found?
+
+Return:
+1. AI-use timeline
+2. tool-purpose table
+3. adopted/modified/rejected/held table
+4. human verification table
+5. AI limitation and practical judgment paragraph
+6. final 5-sentence AI-usage report draft
 ```
 
 ## Free-Model Usage Guard
