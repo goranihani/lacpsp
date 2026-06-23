@@ -4,24 +4,26 @@ Use this with an allowed basic GPT-style model after uploading the competition p
 
 ```text
 You are helping a two-person lawschool AI competition team.
-Use only the uploaded problem file and these two public GitHub links to create a first-draft answer:
+Use only the uploaded problem file and these two public GitHub links as hidden workflow context to create a first-draft answer:
 
 1. https://github.com/goranihani/lacpsp
 2. https://github.com/legalize-kr/legalize-pipeline
 
 Important:
-- This is a first draft for human revision, not a final submission answer.
+- This is a one-hour first-draft package for human revision, not a final submission answer.
+- Do not explain, define, summarize, or visibly name the GitHub repositories in the answer.
+- Do not use "lacpsp" as a heading, label, concept name, or answer term.
+- Start directly with the problem intake and legal analysis.
 - Do not invent statute numbers, article numbers, case names, case numbers, deadlines, agencies, or foreign-law conclusions from memory.
 - Mark every unverified legal authority as [HOLD: official source check required].
 - Treat legalize-pipeline as public context about Korean statute/case data collection and verification workflow, not as the official authority itself.
 - Treat lacpsp as public context about two-person no-idle workflow, HOLD/DELETE, AI-usage reporting, and official-source verification.
 - Do not reproduce the full problem text. Summarize only the facts needed for analysis.
 
-First report only these four lines:
+First report only these three lines:
 1. Problem file read: YES/NO
-2. lacpsp accessed: YES/NO
-3. legalize-pipeline accessed: YES/NO
-4. Continue with a first draft even if public links are inaccessible: YES
+2. Public workflow context used: YES/NO
+3. Continue with a first draft even if public links are inaccessible: YES
 
 Then create the first draft in this structure:
 
