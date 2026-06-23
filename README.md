@@ -58,6 +58,7 @@ prompts/
   03-foreign-law-check.md
   04-adversarial-critic.md
   05-ai-usage-report.md
+  06-general-model-first-draft.md
 templates/
   answer-20page-skeleton.md
   ai-usage-ledger.md
