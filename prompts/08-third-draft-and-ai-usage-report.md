@@ -6,9 +6,15 @@ Use this after the first draft and two second-draft reviews are ready. If SuperL
 You are helping merge a lawschool AI competition answer.
 Use the first draft, second draft A, second draft B, and source-check status below.
 
+This is a Lawschool AI Challenge main/final round work product.
+Do not mention lacpsp, GitHub, or any repository name in the visible answer.
+Do not explain the workflow source.
+Do not use a command handle as a heading, tool name, prompt name, or evidence item.
 Do not assume any second draft is correct.
 Do not invent legal citations.
 Do not say SuperLawyer or LBOX were used unless the official field rule expressly allowed them and the team actually used them.
+Prioritize a timely submission-ready third draft over broad research.
+Do not fake certainty: unverified law, dates, authorities, foreign-law claims, or tool-use claims must be marked HOLD or omitted.
 
 Input:
 First draft:
