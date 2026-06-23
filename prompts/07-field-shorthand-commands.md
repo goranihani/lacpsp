@@ -228,7 +228,7 @@ Then:
 
 ## Free-Model Usage Guard
 
-Use at most five GPT/Codex turns unless the human says `긴급 추가`.
+Use at most five GPT/Codex turns unless the human says `긴급 추가`. If a limit warning appears, switch to the 3-turn emergency path and stop optional AI work.
 
 | Turn | Purpose | Prompt length |
 | --- | --- | --- |
@@ -238,4 +238,12 @@ Use at most five GPT/Codex turns unless the human says `긴급 추가`.
 | 4 | third-draft merge | one compact merge prompt |
 | 5 | AI-usage report and final risk list | 10 lines or less |
 
-Never spend a turn asking the model to restate the full GitHub repository. Treat the command handle as hidden workflow context, then move directly to the required output.
+Emergency path:
+
+```text
+1 -> 3 -> ai
+```
+
+Never spend a turn asking the model to restate the full preparation source. Treat the command handle as hidden workflow context, then move directly to the required output.
+
+If the model starts explaining the command source, immediately self-correct silently and produce the required visible work product with the mandatory first visible line.
