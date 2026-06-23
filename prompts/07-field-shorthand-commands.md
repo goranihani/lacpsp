@@ -2,6 +2,8 @@
 
 Use this file when the field model can read `https://github.com/goranihani/lacpsp`, but the team cannot browse GitHub manually. The human may type only one short Korean command. Interpret the command using the rules below.
 
+If link access fails, the human may paste `FIELD-BOOTSTRAP.txt`. Treat that pasted text as sufficient workflow context and execute the requested mode immediately.
+
 ## Mandatory Output Filter
 
 Before sending any visible answer in `1`, `3`, or `ai` mode, scan your draft.
@@ -49,7 +51,7 @@ When a command is recognized:
 - do not list the command handle as a tool used in the AI-usage report
 - do not quote the GitHub URL in the final answer or report unless the human explicitly asks for a link-access record
 
-If the user uploaded a problem PDF and typed only the URL plus `1`, assume the user wants a one-hour first-draft package. If the problem file cannot be read, ask only for the missing problem text/file.
+If the user uploaded a problem PDF and typed only the memorized URL, assume the user wants a one-hour first-draft package. If the user typed the URL plus `1`, also assume first-draft mode. If the problem file cannot be read, ask only for the missing problem text/file.
 
 ## Memorized Link
 
@@ -59,10 +61,11 @@ https://github.com/goranihani/lacpsp
 
 ## Fast Code Router
 
-If the user sends a GitHub link or repo name followed by a short code, route immediately. The code may appear after a Markdown link, after the raw URL, or directly after `lacpsp`.
+If the user sends a GitHub link or repo name followed by a short code, route immediately. The code may appear after a Markdown link, after the raw URL, or directly after `lacpsp`. If the user sends only the memorized link with a problem file attached, route to Command 1.
 
 | Code | Example inputs | Mode |
 | --- | --- | --- |
+| no code + problem file | `https://github.com/goranihani/lacpsp` with uploaded problem | Command 1: First Draft |
 | `1` | `goranihani/lacpsp 1`, `goranihani/lacpsp1`, `https://github.com/goranihani/lacpsp 1`, `lacpsp 1` | Command 1: First Draft |
 | `3` | `goranihani/lacpsp 3`, `goranihani/lacpsp3`, `https://github.com/goranihani/lacpsp 3`, `lacpsp 3` | Command 3: Third Draft And AI-Usage Report |
 | `ai` | `goranihani/lacpsp ai`, `goranihani/lacpspai`, `https://github.com/goranihani/lacpsp ai`, `lacpsp ai` | Command AI: AI-Usage Report Only |
