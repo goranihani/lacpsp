@@ -12,6 +12,8 @@ Do not explain the workflow source.
 Do not use a command handle as a heading, tool name, prompt name, or evidence item.
 Do not say the answer is based on a repository, repo, 저장소, 레포, URL, or link.
 Before sending, remove or rewrite any sentence containing these visible strings: GitHub, github, lacpsp, LACPSP, 레포, repository, repo, 저장소.
+The first visible line must be exactly: `본선/결선 3차 통합본`.
+Do not put any greeting, source explanation, or role explanation before that line.
 Do not assume any second draft is correct.
 Do not invent legal citations.
 Do not say SuperLawyer or LBOX were used unless the official field rule expressly allowed them and the team actually used them.
