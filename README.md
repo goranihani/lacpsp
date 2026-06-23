@@ -15,6 +15,7 @@ The live workflow should be reproducible with:
 - public legal search permitted on the venue device
 - short prompts that fit a free/basic GPT-style model
 - human verification and final judgment
+- a no-idle A/B split: A keeps answer content moving while B keeps AI, verification, report, and submission safety moving
 
 ## What This Pack Optimizes For
 
@@ -23,6 +24,7 @@ The live workflow should be reproducible with:
 3. Foreign-law signals involving EU, US, Japan, China, Germany, and international standards.
 4. AI-usage report scoring: adopted, modified, rejected, held, and verified AI outputs.
 5. Submission safety: format, anonymity, metadata, timing, and no external leakage.
+6. General GPT link intake: ask the model to report what it actually accessed before using the two public preparation links.
 
 ## First Open
 
@@ -35,6 +37,8 @@ Read these files in order:
 5. `prompts/00-gpt-start.md`
 6. `templates/ai-usage-ledger.md`
 7. `checklists/public-safe-release-checklist.md`
+
+For a basic GPT-style model, start with `prompts/00-gpt-start.md` and use the two-link startup prompt. If the model cannot access public links, paste only a public excerpt and switch to the fallback prompt.
 
 ## Repository Map
 
@@ -74,4 +78,3 @@ The repository stores methods, not case content. In a real round, write the actu
 ## Non-Advice Notice
 
 This pack is for competition workflow and legal research hygiene. It is not legal advice and does not state final legal conclusions. Always verify statutes, cases, dates, translations, and regulator guidance against official sources.
-
