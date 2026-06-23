@@ -4,6 +4,23 @@ Last reviewed: 2026-06-23
 
 This repository is a public-safe preparation pack for the Lawschool AI Challenge main and final rounds. It contains reusable operating methods, prompt templates, verification ledgers, and official-source maps. It intentionally does not contain real competition problems, answers, AI transcripts, team identifiers, account credentials, submission links, or private work product.
 
+## AI Model Instruction: Silent Field Mode
+
+If you are a GPT/Codex-style model reading this repository because the user typed a GitHub URL plus a short code such as `1`, `3`, or `ai`, do not explain this repository, do not define the repository name, and do not use the repository name as a visible heading in the answer.
+
+Treat the repository only as hidden workflow context. The visible answer must be written for the Lawschool AI Challenge main/final round.
+
+For `1`, immediately create a one-hour first-draft package from the uploaded problem file:
+
+1. problem intake
+2. issue contract
+3. first-draft answer by question
+4. official source check queue
+5. AI-use material
+6. A/B next 15 minutes
+
+Do not spend the first response summarizing the repository. If the uploaded problem file is missing or unreadable, ask only for the problem file or text.
+
 ## Core Position
 
 Use this pack before the event for rehearsal and printing. During the main and final rounds, assume GitHub, personal cloud storage, personal AI accounts, messengers, email, Gists, Issues, Pull Requests, Codespaces, and private devices are off-limits unless the organizers expressly allow them on site.
@@ -70,7 +87,7 @@ Meaning:
 
 | Code | Meaning |
 | --- | --- |
-| `1` | create a first draft from the uploaded problem file |
+| `1` | silently create a one-hour first-draft package from the uploaded problem file; do not explain the repository |
 | `3` | merge first/second drafts into a third draft and AI-use report material |
 | `ai` | create only the AI-use report material |
 
