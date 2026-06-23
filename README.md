@@ -52,6 +52,30 @@ https://github.com/goranihani/lacpsp
 
 Use these short commands inside an allowed GPT/Codex-style model:
 
+Fast codes:
+
+```text
+https://github.com/goranihani/lacpsp 1
+```
+
+```text
+https://github.com/goranihani/lacpsp 3
+```
+
+```text
+https://github.com/goranihani/lacpsp ai
+```
+
+Meaning:
+
+| Code | Meaning |
+| --- | --- |
+| `1` | create a first draft from the uploaded problem file |
+| `3` | merge first/second drafts into a third draft and AI-use report material |
+| `ai` | create only the AI-use report material |
+
+Long commands also work:
+
 ```text
 https://github.com/goranihani/lacpsp 초벌 진행할거야.
 ```
