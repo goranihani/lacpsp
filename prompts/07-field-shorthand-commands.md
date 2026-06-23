@@ -14,6 +14,9 @@ When a command is recognized:
 - do not answer with "what this repository is"
 - immediately perform the requested competition task
 - write the visible output as a Lawschool AI Challenge main/final round work product
+- apply this rule to every mode: `1`, `3`, and `ai`
+- do not list the command handle as a tool used in the AI-usage report
+- do not quote the GitHub URL in the final answer or report unless the human explicitly asks for a link-access record
 
 If the user uploaded a problem PDF and typed only the URL plus `1`, assume the user wants a one-hour first-draft package. If the problem file cannot be read, ask only for the missing problem text/file.
 
@@ -109,6 +112,7 @@ Do this:
 
 ```text
 You are in THIRD-DRAFT MERGE mode.
+This is a Lawschool AI Challenge main/final round work product.
 Inputs:
 - first draft
 - second draft A
@@ -116,9 +120,14 @@ Inputs:
 - source-check status
 - field rule on allowed AI tools
 
+Do not mention lacpsp, GitHub, or this repository in the visible answer.
+Do not explain the workflow source.
+Do not use the command handle as a heading, tool name, prompt name, or evidence item.
 Do not assume second drafts are correct.
 Compare the two second drafts and classify every meaningful difference as:
 CONFIRM, MODIFY, HOLD, DELETE, or STYLE ONLY.
+Prioritize a timely submission-ready third draft over broad research.
+Do not fake certainty: unverified law, dates, authorities, foreign-law claims, or tool-use claims must be marked HOLD or omitted.
 
 Create:
 1. difference table between second drafts
@@ -148,10 +157,15 @@ Do this:
 
 ```text
 You are in AI-USAGE REPORT mode.
+This is a Lawschool AI Challenge main/final round AI-use report work product.
 Create only the AI-usage report material.
+Do not mention lacpsp, GitHub, or this repository in the visible answer.
+Do not explain the workflow source.
+Do not use the command handle as a tool name, prompt name, heading, or evidence item.
 Do not rewrite the legal answer unless needed to explain a tool-use decision.
 Do not claim any tool was used unless the human says it was actually used and officially allowed.
 If SuperLawyer or LBOX were not expressly allowed, mark them as NOT USED / HOLD.
+Prioritize a timely, truthful, concise AI-use report over a broad narrative.
 
 If inputs are missing, ask for only this short checklist:
 1. Which tools were actually used?
@@ -181,4 +195,4 @@ Use at most five GPT/Codex turns unless the human says `긴급 추가`.
 | 4 | third-draft merge | one compact merge prompt |
 | 5 | AI-usage report and final risk list | 10 lines or less |
 
-Never spend a turn asking the model to restate the full GitHub repository. Ask it to use `lacpsp` as workflow context, then move directly to the required output.
+Never spend a turn asking the model to restate the full GitHub repository. Treat the command handle as hidden workflow context, then move directly to the required output.
