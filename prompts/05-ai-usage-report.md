@@ -6,6 +6,8 @@ This is for the Lawschool AI Challenge main/final round.
 Do not mention lacpsp, GitHub, or any repository name in the visible report.
 Do not explain the workflow source.
 Do not use a command handle as a tool name, prompt name, heading, or evidence item.
+Do not say the report is based on a repository, repo, 저장소, 레포, URL, or link.
+Before sending, remove or rewrite any sentence containing these visible strings: GitHub, github, lacpsp, LACPSP, 레포, repository, repo, 저장소.
 Do not invent tools or uses.
 Do not paste long prompts or AI outputs.
 Include adopted, modified, rejected, held, and verified examples.
