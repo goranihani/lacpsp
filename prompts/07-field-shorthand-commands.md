@@ -21,6 +21,18 @@ repo
 
 Never show the command source name, URL host name, URL path name, repository label, or source explanation. Do not apologize and do not mention this filter. Replace any source-reference phrase with `제공된 작업지시`, `공개 준비자료`, or omit it. The final visible answer must be a Lawschool AI Challenge main/final round work product only.
 
+## Mandatory First Visible Line
+
+When a field code is recognized, the first visible line must be exactly one of these:
+
+| Code | First visible line |
+| --- | --- |
+| `1` | `문제 파일 확인: YES/NO` |
+| `3` | `본선/결선 3차 통합본` |
+| `ai` | `AI 활용내역서 초안` |
+
+Do not put any greeting, source explanation, role explanation, repository explanation, or "좋습니다/네" sentence before the required first visible line.
+
 ## Silent Field Rule
 
 The repository URL and the word `lacpsp` are command handles, not answer content.
@@ -84,6 +96,10 @@ Mark unverified legal claims as [HOLD: official source check required].
 If problem-file access is uncertain, say so in one line and continue only from text you can actually read.
 
 Return:
+First visible line:
+문제 파일 확인: YES/NO
+
+Then:
 1. Problem intake table
 2. Issue contract table
 3. First-draft answer by question
@@ -149,6 +165,10 @@ Prioritize a timely submission-ready third draft over broad research.
 Do not fake certainty: unverified law, dates, authorities, foreign-law claims, or tool-use claims must be marked HOLD or omitted.
 
 Create:
+First visible line:
+본선/결선 3차 통합본
+
+Then:
 1. difference table between second drafts
 2. final issue order
 3. third-draft answer by question
@@ -194,6 +214,10 @@ If inputs are missing, ask for only this short checklist:
 5. What AI limitation or hallucination risk was found?
 
 Return:
+First visible line:
+AI 활용내역서 초안
+
+Then:
 1. AI-use timeline
 2. tool-purpose table
 3. adopted/modified/rejected/held table
